@@ -1,0 +1,9 @@
+{
+  "name": "com.puzzlerocket.myremoteconfig",
+  "version": "0.0.1",
+  "displayName": "My Remote Config",
+  "description": "Custom Package for Unity Remote Configuration",
+  "dependencies": {
+    "com.unity.remote-config": "4.1.1"
+  }
+}
