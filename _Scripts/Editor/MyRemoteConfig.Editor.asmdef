@@ -1,0 +1,18 @@
+{
+    "name": "MyRemoteConfig.Editor",
+    "rootNamespace": "MyRemoteConfig.Editor",
+    "references": [
+        "GUID:b51ee0e2149574fe7b43d6c8ac1c6dbf"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
