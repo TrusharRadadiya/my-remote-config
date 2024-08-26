@@ -18,7 +18,7 @@ namespace MyRemoteConfig
         [SerializeField, HideInInspector] private string _selectedUGSEnvironment;
         [SerializeField, HideInInspector] private string _selectedEnvironmentID;
 
-        public UnityEvent<RuntimeConfig> OnDataFetched;
+        [HideInInspector] public UnityEvent<RuntimeConfig> OnDataFetched;
             
         private void Awake()
         {

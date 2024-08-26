@@ -12,6 +12,8 @@ namespace MyRemoteConfig.Editor
         
         private SerializedProperty _selectedUGSEnvProp;
         private SerializedProperty _selectedRemoteConfigEnvProp;
+
+        private SerializedProperty _onDataFetchedProp;
         
         private int _selectedUGSEnvIndex;
         private int _selectedRemoteConfigEnvIndex;
@@ -26,10 +28,14 @@ namespace MyRemoteConfig.Editor
 
             _selectedUGSEnvProp = serializedObject.FindProperty("_selectedUGSEnvironment");
             _selectedRemoteConfigEnvProp = serializedObject.FindProperty("_selectedEnvironmentID");
+
+            _onDataFetchedProp = serializedObject.FindProperty("OnDataFetched");
         }
 
         public override void OnInspectorGUI()
         {
+            base.OnInspectorGUI();
+            
             _remoteConfigEnvironments.Clear();
             for (int i = 0; i < _remoteConfigEnvProp.arraySize; i++)
             {
@@ -66,8 +72,7 @@ namespace MyRemoteConfig.Editor
             if (_UGSEnvironments.Count > 0) _selectedUGSEnvProp.stringValue = _UGSEnvironments[_selectedUGSEnvIndex];
             if (_remoteConfigEnvironments.Count > 0) _selectedRemoteConfigEnvProp.stringValue = _remoteConfigEnvironments[_selectedRemoteConfigEnvIndex].ID;
             
-            base.OnInspectorGUI();
-            
+            EditorGUILayout.PropertyField(_onDataFetchedProp);
             serializedObject.ApplyModifiedProperties();
         }
     }
